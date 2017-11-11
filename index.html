@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<head>
+    <title>Andrew Chan | Portfolio</title>
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no">
+    <meta name="author" content="Andrew Chan">
+ 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
+	<link href='https://fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="assets/fa/css/font-awesome.min.css">
+</head>
+
+<body class="fadein">
+	<a name="top"></a>
+	<span id="inverse">NIGHT</span>
+	<section>
+		<ul class="right" id="navbar">
+			<li><a href="#contact">contact</a></li>		
+			<li><a href="assets/resume.pdf" target="_blank">resume</a></li>	
+			<li><a href="#projects">projects</a></li>
+		</ul>
+		<h1>Andrew Chan <img id="profilepic" src="assets/pic1.jpg"><h1>
+		<h2>Student @ UC Irvine and front-end developer.</h2>
+		<p>Hi, I'm a senior at UC Irvine studying Computer Science and a part-time web developer.
+As a part-time web developer, I mostly work with PHP, Javscript, HTML/CSS and occasionally SQL.  I'm a SoCal native, originally from Los Angeles and currently residing in Irvine. My main focus at the moment is school and work, though I enjoy watching soccer from time to time.</p>
+	</section>
+	<hr>
+	<section>
+		<h1 class="center">Skills</h1>
+		<p class="center">Programming Languages and other software I'm familiar with</p>
+		<div class="container">
+
+			<div class="content quarter">
+				<h2><span class="fa fa-terminal"></span> Languages</h2>
+				<hr>
+				<ul>
+					<li>PHP</li>
+					<li>Javascript</li>
+					<li>HTML/CSS</li>
+					<li>Python</li>
+					<li>C</li>	
+					<li>C++</li>
+					<li>Java</li>
+				</ul>
+			</div>
+
+			<div class="content quarter">
+				<h2><span class="fa fa-wrench"></span> Tools</h2>
+				<hr>
+				<ul>
+					<li>JIRA</li>
+					<li>SourceTree</li>
+					<li>Visual Studio</li>
+					<li>Git</li>
+					<li>SQL</li>	
+				</ul>
+			</div>
+
+			<div class="content quarter">
+				<h2><span class="fa fa-asterisk"></span> Misc.</h2>
+				<hr>
+				<ul>
+					<li>Android SDK</li>
+					<li>Linux</li>
+					<li>Data Structures</li>
+					<li>Algorithms</li>
+					<li>LaTeX</li>	
+					<li>MS Office</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+
+	<h1 class="center">Featured Projects</h1>
+	<div class="container center">
+		<a name="projects"></a>
+
+		<div class="content full">
+			<div class="content half left"> 
+				<h2>"Analog Sea" Login Page</h2>
+				<p>
+				An exercise in HTML/CSS to mimic Digital Ocean's login page. This was one of the exercises in an online introduction to web development course that I took.
+				</p>
+				<a href="https://weiwuprojects.github.io/AnalogSea/" target="_blank"><i class="fa fa-external-link"><span>Visit here</span></i></a>
+			</div>
+			<img src="assets/analogsea.png"> 
+		</div>
+
+		<div class="content full">
+			<div class="content half left"> 
+				<h2>Android To-do List App</h2>
+				<p>A simple to do list app to help keep track of daily tasks. Features a minimalist interface, focused on viewing and adding new tasks as quickly as possible. 
+				The motivation behind this design was seeing that many other to-do list apps had complex sets of features which were unnecessary for my needs.</p>
+			</div>
+			<img class="appImg" src="assets/screen1.png"> 
+		</div>	
+	</div>
+
+	<section class="center">
+		<a name="contact"></a>
+		<h1 class="center">Contact</h1>
+
+		<div class="content">
+			<p>You can reach me at: </p>
+			<ul class="contactlist">
+				<li><span class="fa fa-envelope-o"></span><a href="mailto:chana9@uci.edu?subject=Portfolio">chana9@uci.edu</a></li>
+				<li><span title="fax" class="fa fa-fax"></span>323-214-5389</li>
+			</ul>
+		</div>
+
+		<div class="content">
+			<p>Also on: </p>		
+			<ul class="contactlist">
+				<li><span class="fa fa-git"></span><a href="https://github.com/weiwuprojects" target="_blank">Github</a></li>
+				<li><span class="fa fa-linkedin"></span><a href="https://www.linkedin.com/in/chana9/" target="_blank">Linkedin</a></li>
+			</ul>
+		</div>
+	</section>
+
+	<div id="return" class="center">
+		<a href="#top"><h2>Back to top<span class="fa fa-angle-up fa-lg"></span></h2></a>
+	</div>
+
+</body>
+
+
+<script>
+
+	$("a").css("color", "#000");
+	$('img').hover(
+		function() { 
+			//get percent
+			var width = $(this).css("width").split("px")[0];
+			var height = $(this).css("height");
+			// alert(width);
+			$(this).animate({width: width*2}, 'fast'); 
+		}, 
+		function() { 
+			var width = $(this).css("width").split("px")[0];
+			$(this).animate({width: width/1.8}, 'fast'); 
+		}
+	);
+
+	//Handles the 
+	var lightTheme = true;
+	$('#inverse').on("click", function(){
+		$("body").removeClass("fadein");
+		if(lightTheme){
+			$("body").addClass("fadein");
+			$("body").css("background-color", "#222425");
+			$("body").css("color", "#E6F0F5");
+			$("a").css("color", "#E6F0F5");
+			$("hr").css("background-color", "#FFF");
+			$("#inverse").text("DAY");
+			$("#inverse").css("border", "solid white 1px");
+			lightTheme = false;
+		}
+		else{
+			$("body").css("background-color", "#FFF");
+			$("body").css("color", "#000");
+			$("a").css("color", "#000");
+			$("hr").css("background-color", "#000");
+			$("#inverse").text("NIGHT");
+			$("#inverse").css("border", "solid black 1px");
+			lightTheme = true;
+		}
+
+	});
+
+	var imagePaths = ["screen1.png", "screen2.png", "screen3.png"];
+	var index = 0;
+	function switchImage(){
+		index = (index == imagePaths.length - 1) ? 0 : ++index; 
+		var currentFile = imagePaths[index];
+
+		$('.appImg').fadeOut(300, function() {
+		    $('.appImg').attr("src", 'assets/'+currentFile).fadeIn('slow');
+    	});
+	}
+
+	setInterval(switchImage, 5000);
+
+</script>
