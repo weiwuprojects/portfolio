@@ -1,5 +1,5 @@
 	body {
-		width: 96.5%;
+		width: 100%;
       	font-family: 'Roboto', sans-serif;
 	}
 
@@ -16,6 +16,7 @@
 	h1 { 
 		font-size: 35px;
 		margin: 10px 0 10px 0px;
+		white-space: nowrap;
 	}
 
 	h2 {
@@ -60,7 +61,7 @@
 	}
 
 	.contactlist {
-		list-style-type: none;
+		/*list-style-type: none;*/
 		text-align: left;
 	}
 
@@ -123,6 +124,14 @@
 		text-align: center;
 	}
 
+	.content ul {
+		/*list-style-type: circle;*/
+	}
+
+	.content li:hover {
+		margin-left: 10px;
+	}
+
 	.content > hr { width: 100%; }
 
 	#return { width: 100%; }
@@ -156,7 +165,7 @@
 @media only screen and (max-width: 650px) {
 	body { width: 80%; }
     section { width: 85%; }
-    h1 { margin: 20px 0 10px 0; }
+    h1 { margin: 20px 0 10px 0; white-space: nowrap; }
     hr { width: 20%; }
 
 	img {
@@ -179,7 +188,7 @@
 @media only screen and (max-width: 1000px) {
 	body { width: 100%; }
     section { width: 85%; }
-    h1 { margin: 20px 0 10px 0; }
+    h1 { margin: 20px 0 10px 0; white-space: nowrap;}
     hr { width: 20%; }
 	img { width:30%; }
 	span {width: auto;}
